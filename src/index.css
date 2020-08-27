@@ -1,0 +1,87 @@
+/* body {
+  color: white;
+} */
+.background-image {
+  background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F24%2F2019%2F08%2Fsnows-bbq-lexington-texas-1.jpg&q=85);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  /* filter: blur(5px); */
+  transform: scale(1.1);
+}
+.head {
+  margin: 20px auto 15px auto;
+  display: block;
+  height: 300px;
+  width: 400px;
+  border: solid black 2px;
+  background-color: grey;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  /* transition: transform 400ms ease-in-out 0s; */
+}
+
+/* .head:hover {
+  transform: translate(400px, 200px) rotate(90deg);
+} */
+
+.main {
+  margin: 20px auto 15px auto;
+  display: block;
+  height: 550px;
+  width: 500px;
+  border: solid black 2px;
+  background-color: grey;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.main img {
+  height: 298px;
+  width: 450px;
+  border: solid black 2px;
+}
+
+.main p {
+  margin: 5px auto 15px auto;
+}
+
+.menu {
+  margin: auto;
+  width: 90%;
+  height: 80vh;
+  border: black solid 2px;
+  background: white;
+}
+
+.menu-item {
+  width: 150px;
+  height: 150px;
+  border: solid black 2px;
+  display: inline-table;
+  text-align: center;
+  color: blue;
+  background-color: grey;
+  margin: 30px;
+  padding: 3px;
+}
+
+.contact {
+  margin: 20px auto 15px auto;
+  display: block;
+  height: 275px;
+  width: 500px;
+  border: solid black 2px;
+  background-color: grey;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
