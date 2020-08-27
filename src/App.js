@@ -12,18 +12,14 @@ function App() {
   }
 
   function addItem(newItem) {
-    setMenu((prevMenu) => {
-      return {
-        ...prevMenu,
-        newItem,
-      };
-    });
+    setMenu((prevMenu) => prevMenu.concat(newItem));
+    console.log(menu);
   }
 
   return (
     <div>
       <Head handleClick={changeLower} />
-      <Lower choice={lowerDisplay} add={addItem} />
+      <Lower choice={lowerDisplay} add={addItem} items={menu} />
     </div>
   );
 }

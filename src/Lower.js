@@ -10,11 +10,11 @@ function Lower(props) {
   if (lower === 'Main') {
     choice = <Main />;
   } else if (lower === 'Menu') {
-    choice = <Menu />;
+    choice = <Menu items={props.items} />;
   } else if (lower === 'Contact') {
     choice = <Contact />;
   } else {
-    choice = <MenuForm />;
+    choice = <MenuForm add={props.add} items={props.items} />;
   }
 
   return <div>{choice}</div>;

@@ -6,12 +6,21 @@ function MenuForm(props) {
   const [cost, setCost] = useState('');
   const [caption, setCaption] = useState('');
 
-  function handleChange() {}
+  function handleSubmit(event) {
+    event.preventDefault();
+    const newItem = {
+      id: props.items.length + 1,
+      pic: pic,
+      name: name,
+      cost: cost,
+      caption: caption,
+    };
+    props.add(newItem);
+  }
   return (
     <div
       style={{
         margin: 'auto',
-
         textAlign: 'center',
         height: 160,
         width: 190,
@@ -19,24 +28,40 @@ function MenuForm(props) {
         fontSize: '30px',
       }}
     >
-      <form name="MenuForm">
+      <form name="MenuForm" onSubmit={handleSubmit}>
         <input
           type="text"
           name="pic"
           placeholder="Item Picture Url"
-          value={caption}
-          onChange={handleChange}
+          value={pic}
+          onChange={(event) => setPic(event.target.value)}
         />
         <br />
-        <input type="text" name="name" placeholder="Item Name" />
+        <input
+          type="text"
+          name="name"
+          placeholder="Item Name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
         <br />
-        <input type="text" name="cost" placeholder="Item Cost" />
+        <input
+          type="text"
+          name="cost"
+          placeholder="Item Cost"
+          value={cost}
+          onChange={(event) => setCost(event.target.value)}
+        />
         <br />
-        <input type="text" name="caption" placeholder="Item Caption" />
+        <input
+          type="text"
+          name="caption"
+          placeholder="Item Caption"
+          value={caption}
+          onChange={(event) => setCaption(event.target.value)}
+        />
         <br />
-        <button type="button" onSubmit={console.log('hello')}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
