@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from './Menu';
 import Main from './Main';
 import Contact from './Contact';
+import MenuForm from './MenuForm';
 
 function Lower(props) {
   const lower = props.choice;
@@ -10,8 +11,10 @@ function Lower(props) {
     choice = <Main />;
   } else if (lower === 'Menu') {
     choice = <Menu />;
-  } else {
+  } else if (lower === 'Contact') {
     choice = <Contact />;
+  } else {
+    choice = <MenuForm />;
   }
 
   return <div>{choice}</div>;

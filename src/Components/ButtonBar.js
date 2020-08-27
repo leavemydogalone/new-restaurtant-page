@@ -14,7 +14,7 @@ function Buttonbar(props) {
       </button>
       <br />
       <button type="button" name="NewItem" onClick={props.handleClick}>
-        Add new menu item
+        Add new menu items
       </button>
     </div>
   );
